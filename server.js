@@ -7,6 +7,7 @@ let contacts = [
     {
         name : 'John',
         phoneNumber : '011-1111111'
+
     }
 ]
 
