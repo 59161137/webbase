@@ -8,18 +8,24 @@ let contacts = [
         name : 'John',
         phoneNumber : '011-1111111'
 
-}
+    }
 ]
 
 app.use(bodyParser.json())
 app.use(cors())
 
 /// TODO: Develop GET /contacts
-
+app.get('/contacts', (req,res) => {
+    res.json(contacts)
+})
 
 
 /// TODO: Develop POST /contacts
-
+app.post('/contacts', (req,res) => {
+    let newContacts = req.body
+    contacts.push(newContacts)
+    res.status(201).send()
+})
 
 
 app.listen(3000, () => {
